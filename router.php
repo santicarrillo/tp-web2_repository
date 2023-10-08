@@ -22,7 +22,7 @@ $params = explode('/', $action);
 switch ($params[0]) {
     case 'listar':
         $controller = new PilotoController();
-        $controller->showFormula1($id);
+        $controller->showFormula1();
         break;
     case 'agregar':
         $controller = new PilotoController();
