@@ -1,9 +1,13 @@
 <?php
+
 require_once './app/controllers/piloto.controller.php';
 require_once './app/controllers/escuderia.controller.php';
 require_once './app/controllers/about.controller.php';
 require_once './app/controllers/auth.controller.php';
 require_once './app/controllers/pilotosByescuderia.controller.php';
+
+
+
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 $action = 'listar'; // accion por defecto
@@ -20,6 +24,8 @@ if (!empty( $_GET['action'])) {
 
 // parsea la accion para separar accion real de parametros
 $params = explode('/', $action);
+
+
 
 switch ($params[0]) {
     case 'listar':
