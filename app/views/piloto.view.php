@@ -37,14 +37,14 @@ class PilotoView {
 
     
     public function showError($error) {
-        require 'templates/header.php';
+        require 'templates/header.tpl';
         
         echo "
             <div class='alert alert-danger' role='alert'>
                 $error
             </div> 
         ";
-        require 'templates/footer.php';
+        require 'templates/footer.tpl';
     }
 
     }

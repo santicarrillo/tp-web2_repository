@@ -51,15 +51,15 @@ class EscuderiasModel {
     }
 
     function updateEscuderia($id, $equipos, $pilotos, $puntos_equipo, $pos_equipos) {    
-        $query = $this->db->prepare('UPDATE escuderias SET equipos=?, $pilotos=?, puntos_equipo=?, pos_equipos=? WHERE id = ?');
-        $query->execute([$id, $equipos, $pilotos, $puntos_equipo, $pos_equipos]);
+        $query = $this->db->prepare('UPDATE escuderias SET equipos=?, pilotos=?, puntos_equipo=?, pos_equipos=? WHERE id = ?');
+        $query->execute([$equipos, $pilotos, $puntos_equipo, $pos_equipos, $id]);
+        
+
     }
-
-
     public function editEscuderia($id, $equipos, $pilotos, $puntos_equipo, $pos_equipos) {
         $editarpilotos = $this->db->prepare("UPDATE escuderias SET equipos = ?, pilotos = ?, puntos_equipo = ?, pos_equipo = ? WHERE id=?");
        
-        $editarpilotos->execute([$equipos, $pilotos, $puntos_equipo, $pos_equipos, $id]); //nombre-de-la-columna = valor[, nombre-de-la-columna=valor]
+        $editarpilotos->execute([$equipos, $pilotos, $puntos_equipo, $pos_equipos, $id]);        //nombre-de-la-columna = valor[, nombre-de-la-columna=valor]
        
         return $editarpilotos;
     }

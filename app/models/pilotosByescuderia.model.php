@@ -1,6 +1,6 @@
 <?php
 
-class PilotosByEscuderiamodel {
+class PilotosByEscuderiaModel {
 
     private $db;
 

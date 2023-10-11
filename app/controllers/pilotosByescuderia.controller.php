@@ -1,21 +1,21 @@
 <?php 
 require_once './app/models/pilotosByescuderia.model.php';
 require_once './app/views/pilotosByescuderia.view.php';
+require_once './app/helpers/auth.helper.php';
 
-
-class PilotosByEscuderiacontroller {
+class PilotosByEscuderiaController {
    
     private $model;
     private $view;
     
     public function __construct() {
-        $this->model = new PilotosByEscuderiamodel();
-        $this->view = new PilotosByEscuderiaview();
+        $this->model = new PilotosByEscuderiaModel();
+        $this->view = new PilotosByEscuderiaView();
     }
 
     public function showPilotosByEscuderia() {
-        $formula1= $this->model->getPilotosByEscuderia();
-        $this->view->showPilotosByEscuderia($formula1);
+        $escuderias = $this->model->getPilotosByEscuderia();
+        $this->view->showPilotosByEscuderia($escuderias);    
     }
 
 }

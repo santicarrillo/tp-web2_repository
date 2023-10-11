@@ -2,7 +2,7 @@
 
 require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
 
-class PilotosByEscuderiaview {
+class PilotosByEscuderiaView {
 
     private $smarty;
     
@@ -22,14 +22,14 @@ class PilotosByEscuderiaview {
     }
 
     function showFormula1(){
-        header("Location: ".BASE_URL."formula1");
+        header("Location: ".BASE_URL."escuderias");
     }
 
     function showPilotosByEscuderia($PilotosByEscuderia) {
         // asigno variables al tpl smarty
         $this->smarty->assign('PilotosByEscuderia', $PilotosByEscuderia);
         // mostrar el tpl
-        $this->smarty->display('AutorByLibrosList.tpl');
+        $this->smarty->display('pilotosByescuderia.tpl');
     }
 
 }

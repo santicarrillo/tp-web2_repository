@@ -22,29 +22,29 @@ class EscuderiasView {
     }
 
     function showEscuderias(){
-        header("Location: " .BASE_URL."escuderia");
+        header("Location: " .BASE_URL."escuderias");
     }
 
     function showEscuderia(){
-        header("Location: " .BASE_URL."escuderia");
+        header("Location: " .BASE_URL."escuderias");
     }
 
     function printEdit($editarescuderia, $escuderia){
         $this->smarty->assign('count', count($escuderia));
         $this->smarty->assign('editarescuderia', $editarescuderia);
-        $this->smarty->assign('escuderia', $escuderia);
+        $this->smarty->assign('escuderias', $escuderia);
 
         $this->smarty->display('escuderiaList.tpl');
     }
+public function showError($error) {
+    require './templates/header.tpl';
+    
+    echo "
+        <div class='alert alert-danger' role='alert'>
+            $error
+        </div> 
+    ";
+    require './templates/footer.tpl';
+}
 
-    public function showError($error) {
-        require 'templates/header.php';
-        
-        echo "
-            <div class='alert alert-danger' role='alert'>
-                $error
-            </div> 
-        ";
-        require 'templates/footer.php';
-    }
 }

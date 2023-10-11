@@ -35,12 +35,12 @@ class PilotoController {
 
     //metodo de agregar pilotos
     public function addPiloto() {
-
-        // obtengo los datos del usuario
-        $nombre = $_POST['nombre'];
-        $campeonato = $_POST['campeonato'];
-        $puntos = $_POST['puntos'];
-
+       // esto evita q se produzcan advertencia en los campos 
+        $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $campeonato = isset($_POST['campeonato']) ? $_POST['campeonato'] : '';
+        $puntos = isset($_POST['puntos']) ? $_POST['puntos'] : '';
+        
+       
         // validaciones
         if (empty($nombre) || empty($campeonato) || empty($puntos)) {
             $this->view->showError("Debe completar todos los campos");

@@ -34,7 +34,7 @@ class EscuderiasController {
         $pilotos = $_POST['pilotos'];
         $puntos_equipo = $_POST['puntos_equipo'];
         $pos_equipos = $_POST['pos_equipos'];
-
+       
         // validaciones
         if (empty($equipos) || empty($pilotos) || empty($puntos_equipo) || empty($pos_equipos)) {
             $this->view->showError("Debe completar todos los campos");
