@@ -28,6 +28,9 @@
                             <a class="nav-link" aria-current="page" href="escuderia">Pilotos por Escuderias</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="pilotobyescuderia">Pilotos</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="about">Calendario 2023</a>
                         </li>
                         <li class="nav-item">

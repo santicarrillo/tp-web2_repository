@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-10 21:39:40
+/* Smarty version 4.2.1, created on 2023-10-11 02:24:42
   from 'D:\xampp\htdocs\Tp-webII-2daParte\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6525a87c4238d5_13073028',
+  'unifunc' => 'content_6525eb4ab9ce07_97690929',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7688eda71ae0cffdb2b629e8a52a383e9d25acfc' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Tp-webII-2daParte\\templates\\header.tpl',
-      1 => 1696966776,
+      1 => 1696983860,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6525a87c4238d5_13073028 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6525eb4ab9ce07_97690929 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +52,9 @@ function content_6525a87c4238d5_13073028 (Smarty_Internal_Template $_smarty_tpl)
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="escuderia">Pilotos por Escuderias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="pilotobyescuderia">Pilotos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="about">Calendario 2023</a>

@@ -27,6 +27,11 @@ class EscuderiasController {
         
     }
 
+    function showMore($id){
+        $escuderias = $this->model->getMore($id);
+        $this->view->showMore($escuderias);
+    }
+
     public function addEscuderia() {
 
         // obtengo los datos del usuario
@@ -34,14 +39,19 @@ class EscuderiasController {
         $pilotos = $_POST['pilotos'];
         $puntos_equipo = $_POST['puntos_equipo'];
         $pos_equipos = $_POST['pos_equipos'];
-       
+
         // validaciones
         if (empty($equipos) || empty($pilotos) || empty($puntos_equipo) || empty($pos_equipos)) {
-            $this->view->showError("Debe completar todos los campos");
+            $this->view->showError("Debe completar todos los campos",);
             return;
         }
 
-        $id = $this->model->insertEscuderia($equipos, $pilotos, $puntos_equipo, $pos_equipos);
+        if (($_FILES['img']['type'] == "image/jpg" || $_FILES['img']['type'] == "image/jpeg" || $_FILES['img']['type'] == "image/png")){
+            $id = $this->model->insertEscuderia($equipos, $pilotos, $_FILES['img']['tmp_name'], $puntos_equipo, $pos_equipos);
+        } else {
+            $id = $this->model->insertEscuderia($equipos, $pilotos,$_FILES, $puntos_equipo, $pos_equipos);
+        }
+        
         if ($id) {
             header('Location: ' . BASE_URL);
         } else {
