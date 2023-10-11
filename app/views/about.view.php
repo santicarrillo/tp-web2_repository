@@ -10,6 +10,7 @@ class AboutView {
     }
 
 
+<<<<<<< HEAD
     function showAbout($formula1) {
 
         $this->smarty->assign('count', count($formula1));
@@ -17,6 +18,28 @@ class AboutView {
         
         $this->smarty->display('about.tpl');
         
+=======
+    function showAbout($calendarios) {
+        $this->smarty->assign('count', count($calendarios));
+        $this->smarty->assign('libros', $calendarios);
+        // mostrar el tpl
+        $this->smarty->display('about.tpl');
+        
+?>
+    <ul class="list-group">
+    <?php foreach($calendarios as $calendario) { ?>
+       
+        <li class="list-group-item item-task" >
+            <div>
+                 <?php echo $calendario->fecha ?>  <?php echo $calendario->circuito?>   <?php echo $calendario->podio ?>
+            </div>
+        </li>
+        
+    <?php } ?>
+    </ul>
+
+<?php
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
 
     }
 }

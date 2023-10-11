@@ -8,6 +8,7 @@ class EscuderiasModel {
         $this->db = new PDO('mysql:host=localhost;'.'dbname=formula1;charset=utf8', 'root', '');
     }
 
+<<<<<<< HEAD
     function getAllFormula1() {
         $query = $this->db->prepare('SELECT * FROM escuderias');
         $query->execute();
@@ -22,11 +23,22 @@ class EscuderiasModel {
         $query = $this->db->prepare("SELECT * FROM escuderias");
         $query->execute();
 
+=======
+    public function getAllEscuderias() {
+        // 1. abro conexión a la DB
+        // ya esta abierta por el constructor de la clase
+
+        // 2. ejecuto la sentencia (2 subpasos)
+     
+        $query = $this->db->prepare("SELECT * FROM escuderias");
+        $query->execute();
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
         // 3. obtengo los resultados
         $escuderias = $query->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
        
         return $escuderias;
     }
+<<<<<<< HEAD
 
     function getEscuderias() {
         $query = $this->db->prepare('SELECT * FROM escuderias');
@@ -83,6 +95,23 @@ class EscuderiasModel {
         $editarpilotos->execute([$equipos, $pilotos, $puntos_equipo, $pos_equipos, $id]); //nombre-de-la-columna = valor[, nombre-de-la-columna=valor]
        
         return $editarpilotos;
+=======
+    
+    /**
+     * Devuelve la lista de categorias completa.
+     */
+
+    function addEscuderia() {
+
+        $equipos = $_POST['equipos'];
+        $pilotos = $_POST['pilotos'];
+        $puntos_equipo = $_POST['puntos_equipo'];
+        $pos_equipos = $_POST['pos_equipos'];
+
+
+        $this->model->insertEscuderia($equipos, $pilotos, $puntos_equipo, $pos_equipos);
+        header("Location: " . BASE_URL); 
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
     }
 }
 

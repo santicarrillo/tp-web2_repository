@@ -12,6 +12,7 @@ class EscuderiasView {
     }
 
 
+<<<<<<< HEAD
     function showFormula1($formula1) {
 
         $this->smarty->assign('count', count($formula1));
@@ -43,4 +44,12 @@ class EscuderiasView {
         $this->smarty->display('about-escuderias.tpl');
     }
 
+=======
+    function showEscuderias($escuderias) {
+        $this->smarty->assign('count', count($escuderias));
+        $this->smarty->assign('escuderias', $escuderias);
+        $this->smarty->display('escuderiasList.tpl');
+        
+    }
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
 }

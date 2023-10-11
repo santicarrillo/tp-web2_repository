@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
 
 class AuthView {
@@ -17,5 +18,11 @@ class AuthView {
         $this->smarty->assign("msj", $msg);
         $this->smarty->assign("url", $url);
         $this->smarty->assign("error.tpl");
+=======
+
+class AuthView {
+    public function showLogin($error = null) {
+        require './templates/login.phtml';
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
     }
 }

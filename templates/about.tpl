@@ -8,6 +8,7 @@
         </div>
     </main>
 
+<<<<<<< HEAD
 
 <table class="table table-striped">
     <thead>
@@ -35,3 +36,34 @@
 
 
 {include file="footer.tpl"}
+=======
+   
+    <table class="table table-striped">
+        <thead>
+            <th></th>    
+            <th>Fecha</th>
+            <th>Circiuto</th>
+            <th>Podio</th>
+            
+        </thead>     
+    
+            {foreach from=$formula1 item=$calendario}
+        <tr>
+            <td> 
+                <span> 
+                    <td>{$calendario->fecha|truncate:25}</td> 
+                    <td>{$calendario->circuito|truncate:25}</td> 
+                    <td>{$calendario->podio|truncate:25}</td>
+                    
+                </span> 
+            </td>
+                    
+        </tr>
+    {/foreach}
+    
+    </table>
+    
+    <p class="mt-3"><small>Mostrando {$count} libros</small></p>
+    
+    {include file="footer.tpl"}
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8

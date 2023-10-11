@@ -2,6 +2,12 @@
 require_once './app/views/escuderia.view.php';
 require_once './app/models/escuderia.model.php';
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
 class EscuderiasController {
     private $model;
     private $view;
@@ -11,6 +17,7 @@ class EscuderiasController {
         $this->view = new EscuderiasView();
     } 
 
+<<<<<<< HEAD
     public function showFormula1(){
         $formula1 = $this->model->getAllFormula1();
         $this->view->showFormula1($formula1);
@@ -91,4 +98,11 @@ class EscuderiasController {
         header("Location: " . BASE_URL . 'form_altaEscuderia');
         
     }
+=======
+
+    public function showEscuderias(){
+        $escuderias = $this->model->getAllEscuderias();
+        $this->view->showEscuderias($escuderias);    
+    }
+>>>>>>> 3e405618f5bc3263da42149acf7058a8eeda54e8
 }
